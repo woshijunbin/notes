@@ -1,3 +1,4 @@
+'use strict';
 /**
 1.prototype与__proto__
   a) prototype是函数创建时创建的一个默认属性，__proto__为实例对象默认属性。
