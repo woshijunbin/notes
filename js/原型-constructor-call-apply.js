@@ -5,7 +5,7 @@
   b) 一次对象实例过程，类似以下：
       function cat(){}
       var blackCat = {};
-      if(typeof cat.prototype == 'object'){
+      if(typeof cat.prototype == 'object'){ // cat.prototype 有值则传递，否则使用顶层object原型
         blackCat.__proto__ = cat.prototype; // **cat.prototype为object类型，传递地址值**
       }else{
         blackCat.__proto__ = Object.prototype;// **使用Object函数prototype属性**
@@ -67,15 +67,6 @@
 **/
 //解析：Person.prototype与man.__proto__引用地址相同，属性值操作是共享的。
 
-
-/**  
-  function Person(){}
-  Person.prototype.name = "John";
-  var man = new Person();
-  Person.prototype={name:"Mike"};
-  Person.prototype.name = "Tom"; 
-  console.log(man.name);//打印什么？
-**/
 
 
 
